@@ -14,7 +14,8 @@
                     "1688": {
                         "description": "Port used for KMS (protocol: tcp and udp)",
                         "host_default": 1688,
-                        "label": "KMS-port"
+                        "label": "KMS-port",
+                        "protocol": "tcp"
                     },
                 },
 		    }
