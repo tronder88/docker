@@ -1,26 +1,30 @@
 {
     "VLMCSD": {
-	"description": "KMS server made by -  Hotbird64 - MDL forum",
+        "containers": {
+            "vlmcsd": {
+                "image": "docker pull raefon/vlmcsd",
+                "launch_order": 1,
+                "opts": [
+                    [
+                        "--net=host",
+                        ""
+                    ]
+                ],
+                "ports": {
+                    "1688": {
+                        "description": "KMS port",
+                        "host_default": 1688,
+                        "label": "KMS port",
+                        "protocol": "tcp",
+                        "ui": true
+                    }
+                },
+        "description": "VLMCSD - by Hotbird64",
         "ui": {
             "slug": ""
         },
-	"version": "812",
-        "website": "http://forums.mydigitallife.info/threads/50234-Emulated-KMS-Servers-on-non-Windows-platforms?s=4975aee9b60d0a2f372c16646ac6b403",
-        "containers": {
-            "vlmcd": {
-                "image": "docker pull raefon/vlmcsd",
-                "launch_order": 1,
-                "ports": {
-                    "1688": {
-                        "description": "Port used for KMS (protocol: tcp and udp)",
-                        "host_default": 1688,
-                        "label": "KMS-port",
-                        "protocol": "tcp"
-                    },
-                },
-		    }
-		}
-            }
-        }
+        "volume_add_support": false,
+       "website": "http://forums.mydigitallife.info/threads/50234-Emulated-KMS-Servers-on-non-Windows-platforms?s=4975aee9b60d0a2f372c16646ac6b403",
+	"version": "812"
     }
 }
